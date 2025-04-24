@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <base href="./assets/">
+  <title>Container in CSS</title>
+</head>
+<body>
+
+    <header class="w-screen
+     border-b
+     px-1 sm:px-4 md:px-[1rem] py-3
+     flex justify-between items-center">
+        <h1 class="text-4xl font-bold">ONE</h1>
+        <nav class="min-w-[30%] max-w-max
+        px-2
+        hidden md:block">
+            <ul class="flex items-center justify-evenly gap-4">
+                <a href="#home" class="list-item font-semibold hover:text-gray-500">Home</a>
+                <a href="#services" class="list-item font-semibold hover:text-gray-500">Services</a>
+                <a href="#testinomials" class="list-item font-semibold hover:text-gray-500">Testinomials</a>
+
+            </ul>
+        </nav>
+
+        <button class="md:hidden" onclick="this.nextElementSibling.classList.remove('hidden')">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+          </svg>
+        </button>
+
+        <nav class="text-white w-full h-[100%] fixed z-[999] top-0 right-0 hidden">
+          <button class="m-4 absolute" onclick="this.parentElement.classList.add('hidden')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+              <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+            </svg>
+          </button>
+          <div class="h-full flex justify-center items-center bg-green-700">
+            <ul class="text-center space-y-[1rem]">
+              <a href="#home" class="list-item">Home</a>
+              <a href="#services" class="list-item">Services</a>
+              <a href="#testinomials" class="list-item">Testinomials</a>
+            </ul>
+          </div>
+        </nav>
+    </header>
+
+    <!-- HERO Section-->
+    <section class="w-screen h-[50vh] lg:h-[80vh]
+    bg-[url('bg1.png')] bg-no-repeat bg-cover bg-opacity-[0]">
+      <div class="m-auto h-[100%]
+      w-[92%] sm:w-[540px] md:w-[720px] lg:w-[960px] xl:w-[1140px] 2xl:w-[1320px]">
+        <div class="
+        w-[100%] h-[100%]
+        flex flex-col md:flex-row justify-evenly items-center gap-[1rem]">
+          <div class="text-center">
+            <h1 class="text-4xl font-bold text-gray-900 mb-3">
+              Crafted With Care, Served With Soul
+            </h1>
+            <p class="text-base font-semibold text-gray-800 mb-3 text-[text-shadow]">Bringing bold flavors, warm service, and unforgettable dining—right to your table</p>
+            <button class="flex items-center gap-2 m-auto
+              rounded 
+              bg-sky-500 hover:bg-sky-700
+              text-white
+              px-4 py-1 
+              transition-colors duration-300
+              md:py-3">
+                Explore
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
+              </button> 
+          </div>
+
+          <figure class="hidden lg:block md:w-[50%]">
+            <img class="h-auto w-[100%]" src="image.png" alt="resturant-image">
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="m-auto w-[92%] sm:w-[540px] md:w-[720px] lg:w-[960px] xl:w-[1140px] 2xl:w-[1320px] 
+    mb-3 my-4
+    flex flex-col items-evenly justify-center gap-2
+    
+    md:flex-row md:items-center md:h-[50px]">
+
+    <div class="
+    max-h-max w-[100%]
+    border border-2 border-gray-300 rounded-2xl
+    p-[0.5rem]
+    shadow-sm
+    bg-white
+
+    md:transform -translate-y-16
+    " >
+      <h1 class="text-xl font-semibold text-gray-900"> 👨‍🍳 Chef-Crafted Dishes</h1>
+      <p class="text-base text-gray-800 ml-2">Every plate is made with passion by experienced chefs using top-quality ingredients</p>
+              
+    </div>
+
+    <div class="
+      max-h-max w-[100%]
+      border border-2 border-gray-300 rounded-2xl
+      p-[0.5rem]
+      shadow-sm
+      bg-white
+
+      md:transform -translate-y-16
+      
+      " >
+        <h1 class="text-xl font-semibold text-gray-900">🥗 Fresh & Local Ingredients</h1>
+        <p class="text-base text-gray-800 ml-2">We source fresh produce and meats daily from trusted local farms</p>
+                
+      </div>
+
+      <div class="
+      max-h-max w-[100%]
+      border border-2 border-gray-300 rounded-2xl
+      p-[0.5rem]
+      shadow-sm
+      bg-white
+
+      md:transform -translate-y-16
+      " >
+        <h1 class="text-xl font-semibold text-gray-900">🌿 Vegetarian & Vegan</h1>
+        <p class="text-base text-gray-800 ml-2">Flavorful, wholesome meals that everyone can enjoy—no compromise.</p>
+                
+      </div>
+
+    </section>
+
+    <section class="m-auto w-[92%] sm:w-[540px] md:w-[720px] lg:w-[960px] xl:w-[1140px] 2xl:w-[1320px]
+    
+    " >
+
+      <h1 class="
+      text-xl font-semibold mb-1 text-center
+      md:text-3xl md:mb-3">Parking Made Easy</h1>
+
+      <div class="
+      flex flex-col
+
+      md:flex-row md:gap-[1rem]
+      md:text-lg md:justify-center 
+      md:items-center md:font-400
+      ">
+        <figure class="border rounded border-gray-700">
+          <img class="w-full h-auto" src="parking.jpeg" alt="parking" loading="lazy">
+        </figure>
+  
+        <div class="text-gray-800 text-md">
+          No more circling the block or worrying about meters. 
+          We offer free on-site parking exclusively for our guests.
+          Spacious, secure, and just steps from our front door.
+          Whether you're dining in or picking up, we’ve got you covered.
+          Your meal should be stress-free from the moment you arrive
+        </div>
+      </div>
+    </section>
+
+    <section class="m-auto w-[92%] sm:w-[540px] md:w-[720px] lg:w-[960px] xl:w-[1140px] 2xl:w-[1320px]
+    
+    mt-5
+    " >
+
+      <h1 class="text-xl font-semibold mb-1 text-center md:text-3xl md:mb-3">Fast & Fresh Delivery</h1>
+
+      <div class="text-gray-800 text-md md:order-1">
+        Craving your favorites but don’t want to leave home?
+        We deliver hot, fresh meals right to your doorstep.
+        Packed with care and flavor—never soggy, never late.
+        Perfect for cozy nights, lunch breaks, or hosting guests.
+        Just a few taps and we’re on our way!
+      </div>
+    </section>
+
+ 
+    <section class="m-auto w-[92%] sm:w-[540px] md:w-[720px] lg:w-[960px] xl:w-[1140px] 2xl:w-[1320px]
+    mt-[1rem]
+    
+    md:grid grid-cols-3 gap-[1rem]
+    ">
+
+      <h1 class="text-center text-xl font-semibold mb-1
+      md:text-3xl md:mb-3 md:col-span-3 md:mb-1">Testinomials</h1>
+
+      <div class="mb-3 border rounded-2xl shadow-sm border-gray-300 py-3">
+        <div class="flex justify-left items-center gap-4 pt-3 pb-1 px-4 border-b border-gray-300">
+          <div class="w-[50px] aspect-square rounded-full border
+          bg-[url('tp-1.webp')] bg-center bg-no-repeat bg-cover"></div>
+          <h1 class="font-semibold text-lg">bhAAi</h1>
+        </div>
+        <div class="text-center p-2 text-base">The food was beyond delicious—fresh, flavorful, and beautifully presented. The staff made us feel like family. Can’t wait to come back!</div>
+        <div class="text-center">⭐ ⭐ ⭐ ⭐ ⭐</div>
+      </div>
+      
+      <div class="mb-3 border rounded-2xl shadow-sm border-gray-300 py-3">
+        <div class="flex justify-left items-center gap-4 pt-3 pb-1 px-4 border-b border-gray-300">
+          <div class="w-[50px] aspect-square rounded-full border
+          bg-[url('tp-2.jpg')] bg-center bg-no-repeat bg-cover"></div>
+          <h1 class="font-semibold text-lg">tiGor</h1>
+        </div>
+        <div class="text-center p-2 text-base">Took the kids and everyone found something they loved. Great portions, fair prices, and the free parking was a big win.</div>
+        <div class="text-center">⭐ ⭐ ⭐ ⭐ ⭐</div>
+      </div>
+
+      <div class="mb-3 border rounded-2xl shadow-sm border-gray-300 py-3">
+        <div class="flex justify-left items-center gap-4 pt-3 pb-1 px-4 border-b border-gray-300">
+          <div class="w-[50px] aspect-square rounded-full border
+          bg-[url('tp-3.webp')] bg-center bg-no-repeat bg-cover"></div>
+          <h1 class="font-semibold text-lg">Movayya</h1>
+        </div>
+        <div class="text-center p-2 text-base">I ordered online and the food arrived piping hot, neatly packed, and absolutely delicious. Definitely my go-to delivery spot now!</div>
+        <div class="text-center">⭐ ⭐ ⭐ ⭐</div>
+      </div>
+
+      <div class="mb-3 border rounded-2xl shadow-sm border-gray-300 py-3 md:hidden">
+        <div class="flex justify-left items-center gap-4 pt-3 pb-1 px-4 border-b border-gray-300">
+          <div class="w-[50px] aspect-square rounded-full border
+          bg-[url('tp-4.webp')] bg-center bg-no-repeat bg-cover"></div>
+          <h1 class="font-semibold text-lg">Balayya</h1>
+        </div>
+        <div class="text-center p-2 text-base">We came here for a date night and everything was perfect. Cozy ambiance, fast service, and the pasta? Chef’s kiss!</div>
+        <div class="text-center">⭐ </div>
+      </div>
+
+    </section>
+
+    <section class="m-auto w-[92%] sm:w-[540px] md:w-[720px] lg:w-[960px] xl:w-[1140px] 2xl:w-[1320px]">
+      <h1 class="text-center text-3xl font-bold mb-3 text-gray-
+      md:text-4xl md:mt-8">Explore Our Food Items</h1>
+      <button class="flex items-center gap-2 m-auto
+        rounded 
+        bg-sky-500 hover:bg-sky-700
+        text-white
+        px-4 py-1 
+        transition-colors duration-300
+        
+        md:py-2">
+          Explore
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+          </svg>
+      </button>      
+
+    </section>
+
+    <footer class="border-t mt-[1rem] bg-gray-800 text-white py-2">
+
+      <section class="m-auto w-[92%] sm:w-[540px] md:w-[720px] lg:w-[960px] xl:w-[1140px] 2xl:w-[1320px]
+      md:grid grid-cols-3 justify-items-center items-center md:mt-4
+      lg:grid-cols-5 lg:items-start">
+        <h1 class="text-left text-4xl font-bold mb-4 
+        md:justify-self-start md:self-start">ONE</h1>
+        
+        <div class="text-center mb-3">
+          <h1 class="text-xl font-semibold mb-2 text-neutral-50
+          md:text-3xl">Famous Food</h1>
+          <ol class="text-neutral-300">
+            <li>Biryani</li>
+            <li>Noodles</li>
+            <li>Rice</li>
+            <li>Manchuriya</li>
+          </ol>
+        </div>
+
+        <div class="text-center mt-3 mb-3 text-neutral-300 md:mt-0">
+          <h1 class="text-xl font-semibold mb-2 text-neutral-50
+          md:text-3xl">Our Address</h1>
+          <p>Sapthagiri Nagar</p>
+          <p>Madanapalle</p>
+          <p>Andhra Pradesh</p>
+          <p>Pincode: 517325</p>
+        </div>
+
+        <div class="mb-3
+        md:justify-self-center md:w-[80%]
+        md:col-span-3
+        lg:col-span-2">
+          <h1 class="text-center text-xl font-semibold mb-2 text-neutral-50
+          md:text-3xl">Contact Us</h1>
+          <form class="w-[80%]">
+            <label for="mail">Your Email</label><br>
+            <input class="border rounded-md w-full h-8 text-gray-800 px-2" id="mail" type="email"><br>
+            <label for="msg">Your message</label> <br>
+            <textarea class="rounded-md w-full h-16 text-gray-800 px-2" id="msg"></textarea> <br>
+            <div class="text-center">
+              <button type="submit" class="border px-4 p-px mt-1 rounded bg-neutral-50 hover:bg-neutral-400 text-gray-800 font-semibold"> send message</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    
+    </footer>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>
